@@ -1,0 +1,89 @@
+# edgar-parser .gitignore
+# Based on github/gitignore Python.gitignore, trimmed and extended.
+# Lockfiles (uv.lock, poetry.lock, requirements*.txt) and generated
+# models are intentionally NOT ignored: they are committed.
+
+# --- Python bytecode and build output ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+build/
+dist/
+sdist/
+wheels/
+*.egg-info/
+*.egg
+.eggs/
+develop-eggs/
+pip-wheel-metadata/
+MANIFEST
+
+# --- Virtual environments ---
+.venv/
+venv/
+env/
+ENV/
+
+# --- Packaging tool caches ---
+.pdm-python
+.pdm-build/
+__pypackages__/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# --- Testing and coverage ---
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+junit*.xml
+.hypothesis/
+.tox/
+.nox/
+.cache/
+
+# --- Linting and type checking ---
+.ruff_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.pytype/
+.pyright/
+
+# --- Jupyter (exploratory parsing work) ---
+.ipynb_checkpoints/
+
+# --- Secrets and local config ---
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.kubeconfig
+kubeconfig
+
+# --- Local scratch data (real filings pulled for poking around) ---
+# Test fixtures live under tests/ and are committed; this is for throwaway data.
+/scratch/
+/tmp/
+
+# --- Logs ---
+*.log
+
+# --- Editors and IDEs ---
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+.idea/
+*.swp
+*.swo
+*~
+\#*\#
+.\#*
+
+# --- OS ---
+.DS_Store
+Thumbs.db
